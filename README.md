@@ -17,4 +17,4 @@ Alternative query syntax that converts to raw SQL
 
 | Argia SQL | SQL |
 | ------ | ------ |
-| ('John Doe' | 33)>users(title,age) | INSERT INTO users (name,age) VALUES ('John Doe',33) |
+| ('John Doe' \| 33)>users(title,age) | INSERT INTO users (name,age) VALUES ('John Doe',33) |
