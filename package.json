@@ -1,6 +1,6 @@
 {
   "name": "argia",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Alternative query syntax that converts to raw SQL",
   "main": "index.js",
   "repository": {
