@@ -1,5 +1,5 @@
 const selectRegex =
-  /^(?<table>\w+)\((?<fields>[\w,]+)\)\{?(?<limit>\d+)?,?(?<offset>\d+)?\}?\<?(?<order>[-\w]+)?\>?$/
+  /^(?<table>\w+)\((?<fields>[\w,\s\*]+)\)\{?(?<limit>\d+)?,?(?<offset>\d+)?\}?\<?(?<order>[-\w]+)?\>?$/
 const insertRegex = /^\((?<values>.+)\)>(?<table>\w+)\((?<fields>[\w,]+)\)$/
 
 const convert = (text) => {
@@ -17,7 +17,11 @@ const select = (text) => {
   if (!table) throw "table not provided"
   if (!fields) throw "fields not provided"
 
-  let sql = `SELECT ${fields} FROM ${table}`
+  const fildsFormatted = fields
+    .split(",")
+    .map((field) => field.trim())
+    .join(", ")
+  let sql = `SELECT ${fildsFormatted} FROM ${table}`
 
   if (order) {
     const orderDesc = order[0] == "-"
