@@ -2,6 +2,15 @@
 
 Alternative query syntax that converts to raw SQL
 
+## Usage
+
+```js
+const argia = require("argia")
+
+const sql = argia("users(id,title,age)") // SELECT id, title, age FROM users
+const rows = await adapter.query(sql)
+```
+
 ## Examples
 
 ### Select
