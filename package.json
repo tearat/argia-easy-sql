@@ -1,11 +1,14 @@
 {
   "name": "argia",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Alternative query syntax that converts to raw SQL",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tearat/argia-easy-sql.git"
+  },
+  "scripts": {
+    "test": "jest index.test.js"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tearat/argia-easy-sql/issues"
   },
-  "homepage": "https://github.com/tearat/argia-easy-sql#readme"
+  "homepage": "https://github.com/tearat/argia-easy-sql#readme",
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
 }

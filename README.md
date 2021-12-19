@@ -27,4 +27,4 @@ const rows = await adapter.query(sql)
 
 | Argia SQL | SQL |
 | ------ | ------ |
-| ('John Doe' \| 33)>users(title,age) | INSERT INTO users (name,age) VALUES ('John Doe',33) |
+| ('John Doe'\|33)>users(name, age) | INSERT INTO users (name, age) VALUES ('John Doe', 33) |
